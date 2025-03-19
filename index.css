@@ -488,8 +488,8 @@ footer a {
 
 
 
-/* Estilos para móviles -------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media (max-width: 768px) {
+/* MOVILES -------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
     .logo {
         margin-right: 0;
     }
@@ -499,27 +499,20 @@ footer a {
         align-items: center;
     }
 
-    .nav-boton {
-        flex-direction: column; 
-    }
-
-    .recuadro {
-        width: 100%; 
-        margin: 10px 0;
-    }
-
     .recuadr {
         flex-wrap: wrap; 
     }
 
     .tramitesCONTENIDO {
-        flex: 1 1 100%; 
+        flex: 1 1 100%; /* flex-grow: 1: El elemento puede crecer para ocupar el espacio disponible.
+                        flex-shrink: 1: El elemento puede reducirse si es necesario.
+                        flex-basis: 100%: El tamaño inicial del elemento es el 100% del contenedor.*/
         margin: 10px 0;
     }
 }
 
-/* Estilos para tablets (769px a 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* TABLETS */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .logo {
         margin-right: 200px; 
     }
@@ -529,29 +522,10 @@ footer a {
         margin: 0 10px; 
     }
 
-    .hero h1 {
-        font-size: 42px; 
-    }
-
-    .recuadro {
-        width: 48%; 
-        margin: 10px 0; 
-    }
 
     .tramitesCONTENIDO {
         flex: 1 1 45%; 
         margin: 10px 0; 
     }
 
-    .noticia {
-        padding: 10px; 
-    }
-
-    .noticia h3 {
-        font-size: 18px; 
-    }
-
-    .noticia p {
-        font-size: 14px;
-    }
 }
