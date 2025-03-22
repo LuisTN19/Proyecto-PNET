@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento Personal - FitZone</title>
+    <link rel="stylesheet" href="entrenamientopers.css">
+    <script src="js/entrenamientopers.js"></script>
+    <script src="js/claro-oscuro.js"></script>
+    <script src="js/scroll.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/FitZone.png" alt="Logo FitZone" width="50">
+                </a>
+            </div>
+
+            
+            <div class="nav-links">
+                <a href="conocenos.html">Conócenos</a></li>
+                <a href="instalaciones.html">Instalaciones</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            
+            <div class="nav-boton">
+                <a href="hazte_socio.html">Hazte Socio</a>
+                <button id="toggle-theme" class="theme-toggle">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Hero -->
+        <section class="entrenamiento-hero">
+            <div class="hero-text">
+                <h1>ENTRENAMIENTO PERSONAL</h1>
+                <p>Transforma tu cuerpo y alcanza tus metas con nuestros entrenadores profesionales.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Entrenadores -->
+        <section class="entrenadores" id="entrenadores">
+            <h2>Nuestros Entrenadores</h2>
+            <p class="descripcion">
+                En FitZone, contamos con un equipo de entrenadores profesionales certificados, listos para ayudarte a alcanzar tus metas. 
+                Ya sea que busques perder peso, ganar músculo o mejorar tu condición física, nuestros expertos diseñarán un plan personalizado para ti.
+            </p>
+            <div class="entrenadores-grid">
+                <div class="entrenador-card">
+                    <img src="images/entrenador1.jpg" alt="Entrenador 1">
+                    <h3>Carlos Martínez</h3>
+                    <p>Especialista en pérdida de peso y entrenamiento funcional.</p>
+                </div>
+                <div class="entrenador-card">
+                    <img src="images/entrenador2.jpg" alt="Entrenadora 2">
+                    <h3>Ana López</h3>
+                    <p>Experta en entrenamiento de fuerza y musculación.</p>
+                </div>
+                <div class="entrenador-card">
+                    <img src="images/entrenador3.jpg" alt="Entrenador 3">
+                    <h3>Javier Gómez</h3>
+                    <p>Especializado en preparación física para deportes de resistencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Galería -->
+        <section class="galeria">
+            <h2>Galería de Entrenamientos</h2>
+            <p class="descripcion">
+                Descubre nuestras instalaciones y actividades a través de esta galería. Desde entrenamientos personalizados hasta clases grupales, 
+                en FitZone encontrarás todo lo que necesitas para mantenerte en forma y saludable.
+            </p>
+            <div class="carrusel">
+                <div class="carrusel-inner">
+                    <div class="carrusel-item active">
+                        <img src="images/entrenamientop1.jpg" alt="Entrenamiento 1">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/entrenamientop2.jpg" alt="Entrenamiento 2">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/entrenamientop3.webp" alt="Entrenamiento 3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="images/entrenamientop4.jpg" alt="Entrenamiento 4">
+                    </div>
+                </div>
+                <!-- Puntos de navegación -->
+                <div class="carrusel-puntos">
+                    <span class="punto active" data-index="0"></span>
+                    <span class="punto" data-index="1"></span>
+                    <span class="punto" data-index="2"></span>
+                    <span class="punto" data-index="3"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Video Motivacional -->
+        <section class="video-motivacional">
+            <h2>Inspírate</h2>
+            <p class="descripcion">
+                Mira la increíble transformación de uno de nuestros miembros. Con la guía de nuestros entrenadores personales, 
+                logró alcanzar sus metas y mejorar su calidad de vida. ¡Tú también puedes lograrlo!
+            </p>
+            <div class="video-contenedor">
+                <iframe 
+                    src="https://www.youtube.com/embed/Sd43HaOrU7E" 
+                    title="Video motivacional" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>&copy; <span id="year"></span> FitZone. Todos los derechos reservados.</p>
+            <p>
+                <span class="icon">✉️</span> <!-- Icono de carta -->
+                <a href="mailto:info@fitzone.com">info@fitzone.com</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <div class="redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" width="30">
+                </a>
+                <a href="https://www.X.com" target="_blank">
+                    <img src="images/x.png" alt="X" width="30">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank">
+                    <img src="images/tiktok.png" alt="TikTok" width="30">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook" width="30">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/yt.png" alt="YouTube" width="30">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Actualiza el año automáticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
