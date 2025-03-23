@@ -1,18 +1,64 @@
+/* Variables CSS para el modo claro y oscuro */
+:root {
+    --color-fondo: lightgray;
+    --color-texto: black;
+    --color-cabecera: turquoise;
+    --color-footer: turquoise;
+    --color-botones: gray;
+    --color-botones-hover: lightgray;
+    --color-texto-botones: white;
+    --color-texto-botones-hover: black;
+    --color-hero-texto: white;
+    --color-hero-fondo: rgba(0, 0, 0, 0.5);
+    --color-descripcion-texto: #333;
+    --color-descripcion-enlace: #007BFF;
+    --color-cuadrados-fondo: white;
+    --color-cuadrados-borde: turquoise;
+    --color-cuadrados-texto: #333;
+    --color-tabla-borde: turquoise;
+    --color-tabla-fondo: turquoise;
+    --color-tabla-texto: white;
+}
+
+[data-theme="dark"] {
+    --color-fondo: #121212;
+    --color-texto: #e0e0e0;
+    --color-cabecera: #1f1f1f;
+    --color-footer: #1f1f1f;
+    --color-botones: #333;
+    --color-botones-hover: #555;
+    --color-texto-botones: #e0e0e0;
+    --color-texto-botones-hover: #ffffff;
+    --color-hero-texto: white;
+    --color-hero-fondo: rgba(0, 0, 0, 0.7);
+    --color-descripcion-texto: #e0e0e0;
+    --color-descripcion-enlace: #00bcd4;
+    --color-cuadrados-fondo: #2c2c2c;
+    --color-cuadrados-borde: #00bcd4;
+    --color-cuadrados-texto: #e0e0e0;
+    --color-tabla-borde: #00bcd4;
+    --color-tabla-fondo: #00bcd4;
+    --color-tabla-texto: white;
+}
+
+
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: lightgray;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+
 /* CABECERA --------------------------------------------------------------------------------------------------------------------------*/
 header {
-    background-color: turquoise;
+    background-color: var(--color-cabecera);
     padding: 20px 0px;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,20 +66,19 @@ nav{
 }
 
 
-
-
 .logo {
-    margin-right: 500px; 
+    margin-right: 500px;
 }
+
 .logo img {
     height: 80px;
     width: 80px;
     transition: transform 0.3s ease;
 }
-.logo img:hover {
-    transform: scale(1.1); 
-}
 
+.logo img:hover {
+    transform: scale(1.1);
+}
 
 
 .nav-links {
@@ -43,6 +88,7 @@ nav{
     margin: 0 20px;
     padding: 0 20px;
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -51,19 +97,20 @@ nav{
     margin: 0 20px;
     transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
     color: darkcyan;
 }
-
 
 
 .nav-boton {
     display: flex;
     margin-left: 0;
 }
-.nav-boton a{
-    background-color: gray;
-    color: white;
+
+.nav-boton a {
+    background-color: var(--color-botones);
+    color: var(--color-texto-botones);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -72,9 +119,10 @@ nav{
     padding: 8px 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-boton a:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: var(--color-botones-hover);
+    color: var(--color-texto-botones-hover);
 }
 
 .sticky {
@@ -85,12 +133,27 @@ nav{
 }
 
 
+/* tema claro/oscuro */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+
 
 
 
 /* Hero section */
 .hero {
-    background-image: url('images/INSTALACIONES.png'); 
+    background-image: url('images/INSTALACIONES.png');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -98,14 +161,27 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Texto blanco */
+    color: var(--color-hero-texto);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-hero-fondo);
+    z-index: 1;
+}
+
 .hero h1 {
     font-size: 48px;
+    position: relative;
+    z-index: 2;
 }
-
-
 
 .descripcion {
     text-align: center;
@@ -116,11 +192,11 @@ nav{
 
 .descripcion p {
     font-size: 1.1em;
-    color: #333;
+    color: var(--color-descripcion-texto);
 }
 
 .descripcion a {
-    color: #007BFF;
+    color: var(--color-descripcion-enlace);
     text-decoration: none;
 }
 
@@ -130,24 +206,24 @@ nav{
 
 
 
-
+/* Cuadrados de instalaciones */
 .cuadrados {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    gap: 50px; 
+    justify-content: center;
+    gap: 50px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
 .deporte {
-    border: 2px solid turquoise;
+    border: 2px solid var(--color-cuadrados-borde);
     border-radius: 10px;
     padding: 20px;
-    background-color: white;
+    background-color: var(--color-cuadrados-fondo);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(50% - 10px); /* Cada recuadro ocupa el 50% del ancho menos el espacio del gap */
-    max-width: 500px; 
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,48 +231,43 @@ nav{
 }
 
 .instalacion-img {
-    width: 100%; 
-    max-width: 300px; 
-    height: 200px; 
-    border-radius: 10px; 
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .deporte h2 {
-    text-align: center; 
-    margin-bottom: 15px; 
-    color: turquoise; 
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--color-cuadrados-borde);
 }
-
 
 .deporte p {
-    text-align: left; 
-    width: 100%; 
-    margin-bottom: 10px; 
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    color: var(--color-cuadrados-texto);
 }
-
 
 .tabla {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 10px; 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-.tabla th, .tabla td {
-    border: 1px solid turquoise;
+.tabla th,
+.tabla td {
+    border: 1px solid var(--color-tabla-borde);
     padding: 8px;
-    text-align: left; 
+    text-align: left;
 }
 
 .tabla th {
-    background-color: turquoise; 
-    color: white; 
+    background-color: var(--color-tabla-fondo);
+    color: var(--color-tabla-texto);
 }
-
-
-
-
-
 
 
 
@@ -204,40 +275,40 @@ nav{
 
 /* FOOTER --------------------------------------------------------------------------------------------------------------------------*/
 footer {
-    background-color: turquoise;
-    color: black; 
-    padding: 20px; 
+    background-color: var(--color-footer);
+    color: var(--color-texto);
+    padding: 20px;
     font-family: 'Arial', sans-serif;
-
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
-    color: black;
+    color: var(--color-texto);
     text-decoration: none;
 }
 
 .footer-left {
-    text-align: left; 
+    text-align: left;
 }
 
 .footer-right {
-    text-align: right; 
+    text-align: right;
 }
 
 .icon {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .redes img {
-    margin: 0 10px; 
-    text-decoration: none; 
+    margin: 0 10px;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
+
 .redes img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 
@@ -249,23 +320,25 @@ footer a {
     }
 
     .nav-links {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-
+    .deporte {
+        width: 100%; /* Cada recuadro ocupa el 100% del ancho en móviles */
+    }
 }
+
 /* TABLETS */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .logo {
-        margin-right: 200px; 
+        margin-right: 200px;
     }
 
     .nav-links a {
-        font-size: 16px; 
-        margin: 0 10px; 
-        flex-direction: column; 
+        font-size: 16px;
+        margin: 0 10px;
+        flex-direction: column;
         align-items: center;
     }
-
 }

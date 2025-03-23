@@ -41,7 +41,7 @@
     --color-noticias-texto: #e0e0e0;
 }
 
-/* Estilos generales */
+
 body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -50,6 +50,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
+
 
 
 /* CABECERA --------------------------------------------------------------------------------------------------------------------------*/
@@ -65,6 +68,7 @@ nav {
     padding: 0 20px;
 }
 
+
 .logo {
     margin-right: 500px;
 }
@@ -78,6 +82,7 @@ nav {
 .logo img:hover {
     transform: scale(1.1);
 }
+
 
 .nav-links {
     list-style: none;
@@ -99,6 +104,7 @@ nav {
 .nav-links a:hover {
     color: darkcyan;
 }
+
 
 .nav-boton {
     display: flex;
@@ -138,7 +144,10 @@ nav {
 }
 
 
-/*hero*/
+
+
+
+/*HERO*/
 .entrenamiento-hero {
     background-image: url('images/entrenamientobg.jpg');
     background-size: cover;
@@ -174,6 +183,9 @@ nav {
     line-height: 1.6;
     text-align: center;
 }
+
+
+
 
 
 /* Sección de Entrenadores */
@@ -233,6 +245,9 @@ nav {
     font-size: 16px;
     color: var(--color-entrenador-texto);
 }
+
+
+
 
 
 /* Sección de Galería */
@@ -304,6 +319,9 @@ nav {
 }
 
 
+
+
+
 /* Sección de Video Motivacional */
 .video-motivacional {
     padding: 50px 20px;
@@ -331,6 +349,8 @@ nav {
     border-radius: 10px;
     border: none;
 }
+
+
 
 
 

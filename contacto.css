@@ -1,6 +1,49 @@
+/* Variables CSS para el modo claro y oscuro */
+:root {
+    --color-fondo: lightgray;
+    --color-texto: black;
+    --color-cabecera: turquoise;
+    --color-footer: turquoise;
+    --color-botones: gray;
+    --color-botones-hover: lightgray;
+    --color-texto-botones: white;
+    --color-texto-botones-hover: black;
+    --color-banner-texto: white;
+    --color-banner-fondo: rgba(0, 0, 0, 0.5);
+    --color-formulario-fondo: white;
+    --color-formulario-texto: #333;
+    --color-formulario-borde: #ccc;
+    --color-formulario-error: red;
+    --color-formulario-error-fondo: #ffe6e6;
+    --color-formulario-boton: #ff6600;
+    --color-formulario-boton-hover: #e65c00;
+}
+
+[data-theme="dark"] {
+    --color-fondo: #121212;
+    --color-texto: #e0e0e0;
+    --color-cabecera: #1f1f1f;
+    --color-footer: #1f1f1f;
+    --color-botones: #333;
+    --color-botones-hover: #555;
+    --color-texto-botones: #e0e0e0;
+    --color-texto-botones-hover: #ffffff;
+    --color-banner-texto: white;
+    --color-banner-fondo: rgba(0, 0, 0, 0.7);
+    --color-formulario-fondo: #2c2c2c;
+    --color-formulario-texto: #e0e0e0;
+    --color-formulario-borde: #555;
+    --color-formulario-error: #ff6666;
+    --color-formulario-error-fondo: #4d0000;
+    --color-formulario-boton: #ff6600;
+    --color-formulario-boton-hover: #e65c00;
+}
+
+
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: lightgray;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -9,11 +52,11 @@ body {
 
 /* CABECERA --------------------------------------------------------------------------------------------------------------------------*/
 header {
-    background-color: turquoise;
+    background-color: var(--color-cabecera);
     padding: 20px 0px;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,20 +64,19 @@ nav{
 }
 
 
-
-
 .logo {
-    margin-right: 500px; 
+    margin-right: 500px;
 }
+
 .logo img {
     height: 80px;
     width: 80px;
     transition: transform 0.3s ease;
 }
-.logo img:hover {
-    transform: scale(1.1); 
-}
 
+.logo img:hover {
+    transform: scale(1.1);
+}
 
 
 .nav-links {
@@ -44,6 +86,7 @@ nav{
     margin: 0 20px;
     padding: 0 20px;
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -52,19 +95,20 @@ nav{
     margin: 0 20px;
     transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
     color: darkcyan;
 }
-
 
 
 .nav-boton {
     display: flex;
     margin-left: 0;
 }
-.nav-boton a{
-    background-color: gray;
-    color: white;
+
+.nav-boton a {
+    background-color: var(--color-botones);
+    color: var(--color-texto-botones);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -73,15 +117,34 @@ nav{
     padding: 8px 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-boton a:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: var(--color-botones-hover);
+    color: var(--color-texto-botones-hover);
 }
 
 
-/*FORMULARIO ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* tema claro/oscuro */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* FORMULARIO --------------------------------------------------------------------------------------------------------------------------*/
 .banner {
-    background: url(images/contacto1.jpg);
+    background: url('images/contacto1.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -89,55 +152,60 @@ nav{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    padding-left: 50px;
+    color: var(--color-banner-texto);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .texto {
     text-align: left;
+    padding: 50px;
 }
+
 .texto h1 {
-    font-size: 48px; 
-    margin-bottom: 40px; 
+    font-size: 48px;
+    margin-bottom: 40px;
 }
 
 .texto p {
-    font-size: 18px; 
-    margin-top: 40; 
+    font-size: 18px;
+    margin-top: 40px;
 }
 
 .formulario {
     width: 90%;
-    max-width: 900px; 
-    background: white;
-    padding: 60px; 
-    min-height: 600px; 
-    margin: 40px auto; 
+    max-width: 900px;
+    background: var(--color-formulario-fondo);
+    padding: 60px;
+    min-height: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .formulario h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    color: var(--color-formulario-texto);
 }
 
 .formulario p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #666;
+    color: var(--color-formulario-texto);
 }
 
 .error {
-    color: red;
+    color: var(--color-formulario-error);
     font-size: 18px;
-    margin-top: -20px; 
-    margin-bottom: 10px; 
+    margin-top: -20px;
+    margin-bottom: 10px;
     display: block;
 }
-.error-input {
-    border: 2px solid red !important;
-    background-color: #ffe6e6; 
-}
 
+.error-input {
+    border: 2px solid var(--color-formulario-error) !important;
+    background-color: var(--color-formulario-error-fondo);
+}
 
 .casilla .error {
     margin-top: 5px;
@@ -148,10 +216,12 @@ nav{
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-formulario-borde);
     border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 30px;
+    background-color: var(--color-formulario-fondo);
+    color: var(--color-formulario-texto);
 }
 
 .formulario select {
@@ -166,21 +236,21 @@ nav{
 }
 
 .casilla {
-    display: inline-flex; 
-    align-items: center; 
-    gap: 40px; 
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
     margin-bottom: 40px;
 }
 
 .casilla input[type="checkbox"] {
-    margin: 0; 
+    margin: 0;
     width: 18px;
     height: 18px;
 }
 
 .boton {
     width: 100%;
-    background: #ff6600;
+    background: var(--color-formulario-boton);
     color: white;
     border: none;
     padding: 12px;
@@ -191,49 +261,50 @@ nav{
 }
 
 .boton:hover {
-    background: #e65c00;
+    background: var(--color-formulario-boton-hover);
 }
+
+
 
 
 
 /* FOOTER --------------------------------------------------------------------------------------------------------------------------*/
 footer {
-    background-color: turquoise;
-    color: black; 
-    padding: 20px; 
+    background-color: var(--color-footer);
+    color: var(--color-texto);
+    padding: 20px;
     font-family: 'Arial', sans-serif;
-
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
-    color: black;
+    color: var(--color-texto);
     text-decoration: none;
 }
 
 .footer-left {
-    text-align: left; 
+    text-align: left;
 }
 
 .footer-right {
-    text-align: right; 
+    text-align: right;
 }
 
 .icon {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .redes img {
-    margin: 0 10px; 
-    text-decoration: none; 
+    margin: 0 10px;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
-.redes img:hover {
-    transform: scale(1.2); 
-}
 
+.redes img:hover {
+    transform: scale(1.2);
+}
 
 
 
@@ -244,31 +315,28 @@ footer a {
     }
 
     .nav-links {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-    .recuadr {
-        flex-wrap: wrap; 
-    }
-
     .banner {
-        padding: 20px; 
+        padding: 20px;
     }
-
 
     .banner .texto p {
-        font-size: 14px; 
+        font-size: 14px;
     }
+
     .formulario {
-        width: 90%; 
-        margin: 0 10px; 
-        padding: 20px; 
+        width: 90%;
+        margin: 0 10px;
+        padding: 20px;
     }
 
     .formulario h2 {
-        font-size: 24px; 
+        font-size: 24px;
     }
+
 
     .formulario p {
         font-size: 14px; 
@@ -278,84 +346,48 @@ footer a {
         display: flex;
         flex-direction: column;
         gap: 10px; 
+        font-size: 14px;
     }
 
     .formulario textarea {
-        height: 100px; 
+        height: 100px;
     }
 }
 
-/* TABLETS*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .logo {
-        margin-right: 200px; 
-    }
-
-    .nav-links a {
-        font-size: 16px; 
-        margin: 0 10px; 
-    }
-
-    .banner {
-        padding: 30px; 
-    }
-
-    .banner .texto p {
-        font-size: 16px; /
-    }
-
-    .formulario {
-        width: 80%; 
-        margin: 0 auto; 
-        padding: 30px; 
-    }
-
-    .formulario h2 {
-        font-size: 28px; 
-    }
-
-    .formulario p {
-        font-size: 16px; 
-    }
-
-    .formulario form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px; 
-    }
-
-    .formulario textarea {
-        height: 120px; 
-    }
-
-
-}
-
-
-/* MOVILES -------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-    .logo {
-        margin-right: 0;
-    }
-
-    .nav-links {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-
-}
 /* TABLETS */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .logo {
-        margin-right: 200px; 
+        margin-right: 200px;
     }
 
     .nav-links a {
-        font-size: 16px; 
+        font-size: 16px;
         margin: 0 10px;
-        flex-direction: column; 
-        align-items: center; 
     }
 
+    .banner {
+        padding: 30px;
+    }
+
+    .banner .texto p {
+        font-size: 16px;
+    }
+
+    .formulario {
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    .formulario h2 {
+        font-size: 28px;
+    }
+
+    .formulario p {
+        font-size: 16px;
+    }
+
+    .formulario textarea {
+        height: 120px;
+    }
 }

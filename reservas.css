@@ -1,17 +1,58 @@
+/* Variables CSS para el modo claro y oscuro */
+:root {
+    --color-fondo: white;
+    --color-texto: black;
+    --color-cabecera: turquoise;
+    --color-footer: turquoise;
+    --color-botones: gray;
+    --color-botones-hover: lightgray;
+    --color-texto-botones: white;
+    --color-texto-botones-hover: black;
+    --color-formulario-fondo: white;
+    --color-formulario-texto: #333;
+    --color-formulario-borde: #ccc;
+    --color-formulario-error: red;
+    --color-formulario-boton: #28a745;
+    --color-formulario-boton-hover: #218838;
+}
+
+[data-theme="dark"] {
+    --color-fondo: #121212;
+    --color-texto: #e0e0e0;
+    --color-cabecera: #1f1f1f;
+    --color-footer: #1f1f1f;
+    --color-botones: #333;
+    --color-botones-hover: #555;
+    --color-texto-botones: #e0e0e0;
+    --color-texto-botones-hover: #ffffff;
+    --color-formulario-fondo: #2c2c2c;
+    --color-formulario-texto: #e0e0e0;
+    --color-formulario-borde: #555;
+    --color-formulario-error: #ff6666;
+    --color-formulario-boton: #28a745;
+    --color-formulario-boton-hover: #218838;
+}
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     margin: 0;
     padding: 0;
 }
 
+
+
+
+
 /* CABECERA --------------------------------------------------------------------------------------------------------------------------*/
 header {
-    background-color: turquoise;
+    background-color: var(--color-cabecera);
     padding: 20px 0px;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,20 +60,19 @@ nav{
 }
 
 
-
-
 .logo {
-    margin-right: 500px; 
+    margin-right: 500px;
 }
+
 .logo img {
     height: 80px;
     width: 80px;
     transition: transform 0.3s ease;
 }
-.logo img:hover {
-    transform: scale(1.1); 
-}
 
+.logo img:hover {
+    transform: scale(1.1);
+}
 
 
 .nav-links {
@@ -42,6 +82,7 @@ nav{
     margin: 0 20px;
     padding: 0 20px;
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -50,19 +91,19 @@ nav{
     margin: 0 20px;
     transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
     color: darkcyan;
 }
-
-
 
 .nav-boton {
     display: flex;
     margin-left: 0;
 }
-.nav-boton a{
-    background-color: gray;
-    color: white;
+
+.nav-boton a {
+    background-color: var(--color-botones);
+    color: var(--color-texto-botones);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -71,18 +112,37 @@ nav{
     padding: 8px 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-boton a:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: var(--color-botones-hover);
+    color: var(--color-texto-botones-hover);
+}
+
+
+/* tema claro/oscuro */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 
 
+
+
+/* FORMULARIO DE RESERVA --------------------------------------------------------------------------------------------------------------------------*/
 .reserva-form {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: ligh;
+    background-color: var(--color-formulario-fondo);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -90,6 +150,7 @@ nav{
 .reserva-form h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: var(--color-formulario-texto);
 }
 
 .form-group {
@@ -100,14 +161,17 @@ nav{
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: var(--color-formulario-texto);
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-formulario-borde);
     border-radius: 4px;
+    background-color: var(--color-formulario-fondo);
+    color: var(--color-formulario-texto);
 }
 
 .horas-reserva {
@@ -123,63 +187,69 @@ nav{
 #bot {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
-    color: #fff;
+    background-color: var(--color-formulario-boton);
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #bot:hover {
-    background-color: #218838;
+    background-color: var(--color-formulario-boton-hover);
 }
+
 .error-message {
-    color: red;
+    color: var(--color-formulario-error);
     font-size: 0.9em;
     display: block;
     margin-top: 5px;
 }
 
 .error-input {
-    border-color: red !important;
+    border-color: var(--color-formulario-error) !important;
 }
+
+
+
+
 
 /* FOOTER --------------------------------------------------------------------------------------------------------------------------*/
 footer {
-    background-color: turquoise;
-    color: black; 
-    padding: 20px; 
+    background-color: var(--color-footer);
+    color: var(--color-texto);
+    padding: 20px;
     font-family: 'Arial', sans-serif;
-
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
-    color: black;
+    color: var(--color-texto);
     text-decoration: none;
 }
 
 .footer-left {
-    text-align: left; 
+    text-align: left;
 }
 
 .footer-right {
-    text-align: right; 
+    text-align: right;
 }
 
 .icon {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .redes img {
-    margin: 0 10px; 
-    text-decoration: none; 
+    margin: 0 10px;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
+
 .redes img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 
@@ -191,16 +261,16 @@ footer a {
     }
 
     .nav-links {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-
 }
+
 /* TABLETS */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .logo {
-        margin-right: 200px; 
+        margin-right: 200px;
     }
 
     .nav-links a {
