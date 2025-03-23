@@ -39,6 +39,7 @@
     --color-titulo-seccion: #00bcd4;
 }
 
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
@@ -46,7 +47,6 @@ body {
     color: var(--color-texto);
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
-
 
 /* CABECERA --------------------------------------------------------------------------------------------------------------------------*/
 header {
@@ -62,7 +62,6 @@ nav {
     padding: 0 20px;
 }
 
-
 .logo {
     margin-right: 500px;
 }
@@ -76,7 +75,6 @@ nav {
 .logo img:hover {
     transform: scale(1.1);
 }
-
 
 .nav-links {
     list-style: none;
@@ -98,7 +96,6 @@ nav {
 .nav-links a:hover {
     color: darkcyan;
 }
-
 
 .nav-boton {
     display: flex;
@@ -128,7 +125,6 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 /* tema claro/oscuro */
 .theme-toggle {
     background: none;
@@ -142,10 +138,6 @@ nav {
 .theme-toggle:hover {
     transform: scale(1.1);
 }
-
-
-
-
 
 /* Hero */
 .hero {
@@ -185,10 +177,6 @@ nav {
     background: var(--color-hero-fondo);
     z-index: 1;
 }
-
-
-
-
 
 /* Secciones */
 .container {
@@ -264,7 +252,6 @@ nav {
     color: var(--color-card-texto);
 }
 
-
 /* Video */
 .video-container {
     max-width: 800px;
@@ -278,10 +265,6 @@ nav {
     border: none;
     box-shadow: 0 4px 8px var(--color-container-sombra);
 }
-
-
-
-
 
 /* FOOTER --------------------------------------------------------------------------------------------------------------------------*/
 footer {
@@ -320,9 +303,6 @@ footer a {
 .redes img:hover {
     transform: scale(1.2);
 }
-
-
-
 
 
 /* MOVILES -------------------------------------------------------------------------------------------------------------------------------------------------*/

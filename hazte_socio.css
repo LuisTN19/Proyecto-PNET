@@ -53,7 +53,7 @@
     --color-form-boton-hover: #00CED1;
 }
 
-
+/* Estilos generales */
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
@@ -61,10 +61,6 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
 }
-
-
-
-
 
 /* CABECERA --------------------------------------------------------------------------------------------------------------------------*/
 header {
@@ -79,7 +75,6 @@ nav {
     padding: 0 20px;
 }
 
-
 .logo {
     margin-right: 500px;
 }
@@ -93,7 +88,6 @@ nav {
 .logo img:hover {
     transform: scale(1.1);
 }
-
 
 .nav-links {
     list-style: none;
@@ -115,7 +109,6 @@ nav {
 .nav-links a:hover {
     color: darkcyan;
 }
-
 
 .nav-boton {
     display: flex;
@@ -139,7 +132,6 @@ nav {
     color: var(--color-texto-botones-hover);
 }
 
-
 /* tema claro/oscuro */
 .theme-toggle {
     background: none;
@@ -153,10 +145,6 @@ nav {
 .theme-toggle:hover {
     transform: scale(1.1);
 }
-
-
-
-
 
 /* REGISTRARSE --------------------------------------------------------------------------------------------------------------------------*/
 main {
@@ -267,11 +255,6 @@ form button:hover {
     border: 2px solid red !important;
     background-color: #ffe6e6; 
 }
-
-
-
-
-
 /* FOOTER --------------------------------------------------------------------------------------------------------------------------*/
 footer {
     background-color: var(--color-footer);

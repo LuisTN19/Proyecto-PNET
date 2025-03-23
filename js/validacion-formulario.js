@@ -20,7 +20,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     // Teléfono--------------------------------------------------------------
     let telefono = document.getElementById("telefono");
     let errorTelefono = document.getElementById("error-telefono");
-    let expresionTelefono = /^\+?[0-9\s-]+$/; // Permite números, espacios, guiones y opcionalmente el +
+    let expresionTelefono = /^\+?[0-9\s-]+$/; 
 
     if (telefono && telefono.value.trim() !== "" && !expresionTelefono.test(telefono.value)) {
         errorTelefono.textContent = "Ingrese un teléfono válido.";
