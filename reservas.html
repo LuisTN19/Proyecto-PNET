@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Instalaciones | FitZone</title>
+    <link rel="stylesheet" href="reservas.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/FitZone.png" alt="Logo FitZone" width="50">
+                </a>
+            </div>
+
+            
+            <div class="nav-links">
+                <a href="conocenos.html">Conócenos</a></li>
+                <a href="instalaciones.html">Instalaciones</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            
+            <div class="nav-boton">
+                <a href="hazte_socio.html">Hazte Socio</a>
+                <button id="toggle-theme" class="theme-toggle">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="reserva-form">
+            <h1>Reservar Instalación</h1>
+            <form>
+                <!-- Información básica del reservante -->
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span id="error-nombre" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                    <span id="error-telefono" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="error-email" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipo-sala">Tipo de instalación:</label>
+                    <select id="tipo-sala" name="tipo-sala" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="futbol">Campo de Fútbol</option>
+                        <option value="piscina">Piscina Olímpica</option>
+                        <option value="futbol-sala">Pista de Fútbol Sala</option>
+                        <option value="baloncesto">Pista de Baloncesto</option>
+                        <option value="cardio">Sala de Cardio</option>
+                        <option value="tenis">Pistas de Tenis</option>
+                        <option value="boxeo">Zona de Boxeo</option>
+                        <option value="atletismo">Pista de Atletismo</option>
+                        <option value="musculacion">Sala de Musculación</option>
+                        <option value="funcional">Zona de Entrenamiento Funcional</option>
+                        <option value="crossfit">Zona de CrossFit</option>
+                        <option value="tenis-mesa">Zona de Tenis de Mesa</option>
+                    </select>
+                    <span id="error-tipo-sala" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="personas">Número de personas:</label>
+                    <input type="number" id="personas" name="personas" min="1" required>
+                    <span id="error-personas" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha">Fecha de reserva:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <span id="error-fecha" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label>Rango de horas:</label>
+                    <div class="horas-reserva">
+                        <input type="time" id="hora-inicio" name="hora-inicio" required>
+                        <span>a</span>
+                        <input type="time" id="hora-fin" name="hora-fin" required>
+                    </div>
+                    <span id="error-horas" class="error-message"></span>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="form-group">
+                    <button type="submit" id="bot">Reservar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>&copy; <span id="year"></span> FitZone. Todos los derechos reservados.</p>
+            <p>
+                <span class="icon">✉️</span> <!-- Icono de carta -->
+                <a href="mailto:info@fitzone.com">info@fitzone.com</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <div class="redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" width="30">
+                </a>
+                <a href="https://www.X.com" target="_blank">
+                    <img src="images/x.png" alt="X" width="30">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank">
+                    <img src="images/tiktok.png" alt="TikTok" width="30">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook" width="30">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/yt.png" alt="YouTube" width="30">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Actualiza el año automáticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+<script src="js/validacion-formulario.js"></script>
+</body>
+</html>

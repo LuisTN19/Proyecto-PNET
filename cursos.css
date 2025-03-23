@@ -119,6 +119,12 @@ nav {
     background-color: var(--color-botones-hover);
     color: var(--color-texto-botones-hover);
 }
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 /* tema claro/oscuro */
 .theme-toggle {
@@ -254,4 +260,32 @@ footer a {
 
 .redes img:hover {
     transform: scale(1.2);
+}
+
+/* MOVILES -------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+
+}
+/* TABLETS */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        margin-right: 200px; 
+    }
+
+    .nav-links a {
+        font-size: 16px; 
+        margin: 0 10px; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
 }

@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - FitZone</title>
-    <link rel="stylesheet" href="hazte_socio.css">
+    <title>Registro | FitZone</title>
+    <link rel="stylesheet" href="hazte_socio.css"> <!-- Asegúrate de que este archivo CSS esté vinculado -->
     <script src="js/claro-oscuro.js"></script>
-    <script src="js/scroll.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +27,6 @@
             <div class="nav-boton">
                 <a href="hazte_socio.html">Hazte Socio</a>
                 <button id="toggle-theme" class="theme-toggle">🌙</button>
-
             </div>
         </nav>
     </header>
@@ -39,6 +37,7 @@
             <div>
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" required>
+                <span id="error-email" class="error"></span>
             </div>
             <div>
                 <label for="password">Contraseña</label>
@@ -47,12 +46,14 @@
             <div>
                 <label for="repeat-password">Repita la contraseña</label>
                 <input type="password" id="repeat-password" name="repeat-password" required>
+                <span id="error-password" class="error"></span> <!-- Mensaje de error -->
             </div>
 
             <h2>Datos personales</h2>
             <div>
                 <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="nombre" name="nombre" required>
+                <span id="error-nombre" class="error"></span>
             </div>
             <div>
                 <label for="lastname">Apellidos</label>
@@ -62,7 +63,8 @@
             <h2>Contacto</h2>
             <div>
                 <label for="phone">Móvil (Opcional)</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="telefono" name="telefono">
+                <span id="error-telefono" class="error"></span>
             </div>
 
             <div class="preferencias">
@@ -72,9 +74,10 @@
                     Quiero recibir promociones exclusivas y contenidos personalizados
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <input type="checkbox" id="politica" name="politica" required>
                     He leído y acepto la Política de privacidad
                 </label>
+                <span id="error-politica" class="error"></span>
             </div>
 
             <button type="submit">ACEPTAR</button>

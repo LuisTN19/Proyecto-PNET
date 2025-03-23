@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitZone - Conócenos</title>
+    <title>FitZone | Conócenos</title>
     <link rel="stylesheet" href="conocenos.css">
     <script src="js/claro-oscuro.js"></script>
-    <script src="js/scroll.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="sticky">
         <nav>
-            
             <div class="logo">
                 <a href="index.html">
                     <img src="images/FitZone.png" alt="Logo FitZone" width="50">
                 </a>
             </div>
 
-            
             <div class="nav-links">
-                <a href="conocenos.html">Conócenos</a></li>
+                <a href="conocenos.html">Conócenos</a>
                 <a href="instalaciones.html">Instalaciones</a>
                 <a href="cursos.html">Cursos</a>
                 <a href="contacto.html">Contacto</a>
             </div>
 
-            
             <div class="nav-boton">
                 <a href="hazte_socio.html">Hazte Socio</a>
                 <button id="toggle-theme" class="theme-toggle">🌙</button>
             </div>
-
         </nav>
     </header>
 
@@ -43,13 +38,13 @@
         </section>
 
         <!-- Nuestra Misión -->
-        <section class="container">
+        <section class="container visible">
             <h2>Nuestra Misión</h2>
             <p>En FitZone, nos dedicamos a transformar vidas a través del deporte y el bienestar. Queremos inspirarte a ser la mejor versión de ti mismo, ofreciéndote programas personalizados, instalaciones de última generación y un equipo de profesionales comprometidos con tu éxito.</p>
         </section>
 
         <!-- Video de YouTube -->
-        <section class="container">
+        <section class="container visible">
             <h2>Descubre FitZone en Video</h2>
             <div class="video-container">
                 <iframe 
@@ -64,7 +59,7 @@
         </section>
 
         <!-- Nuestros Servicios -->
-        <section class="container">
+        <section class="container visible">
             <h2>Nuestros Servicios</h2>
             <div class="grid">
                 <div class="card">
@@ -95,7 +90,7 @@
         </section>
 
         <!-- Testimonios -->
-        <section class="container">
+        <section class="container visible">
             <h2>Lo que dicen nuestros clientes</h2>
             <div class="grid">
                 <div class="card">
@@ -124,7 +119,7 @@
         <div class="footer-left">
             <p>&copy; <span id="year"></span> FitZone. Todos los derechos reservados.</p>
             <p>
-                <span class="icon">✉️</span> <!-- Icono de carta -->
+                <span class="icon">✉️</span> 
                 <a href="mailto:info@fitzone.com">info@fitzone.com</a>
             </p>
         </div>
@@ -148,24 +143,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Animación de aparición de secciones
-        const sections = document.querySelectorAll('.container');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>

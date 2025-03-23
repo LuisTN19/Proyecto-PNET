@@ -371,3 +371,34 @@ footer a {
 .redes img:hover {
     transform: scale(1.2);
 }
+
+
+
+
+/* MOVILES -------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+
+}
+/* TABLETS */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        margin-right: 200px; 
+    }
+
+    .nav-links a {
+        font-size: 16px; 
+        margin: 0 10px;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+}
