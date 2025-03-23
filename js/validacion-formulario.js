@@ -23,7 +23,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     let expresionTelefono = /^\+?[0-9\s-]+$/; // Permite números, espacios, guiones y opcionalmente el +
 
     if (telefono && telefono.value.trim() !== "" && !expresionTelefono.test(telefono.value)) {
-        errorTelefono.textContent = "Ingrese un teléfono válido (solo números y opcionalmente +).";
+        errorTelefono.textContent = "Ingrese un teléfono válido.";
         telefono.classList.add("error-input");
         errores = true;
     } else if (telefono) {
@@ -31,18 +31,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
         telefono.classList.remove("error-input");
     }
 
-    // Correo electrónico-----------------------------------------------------
-    let email = document.getElementById("email");
-    let errorEmail = document.getElementById("error-email");
-
-    if (email && email.value.trim() === "") {
-        errorEmail.textContent = "El correo electrónico es obligatorio.";
-        email.classList.add("error-input");
-        errores = true;
-    } else if (email) {
-        errorEmail.textContent = "";
-        email.classList.remove("error-input");
-    }
 
     // Política de Privacidad-------------------------------------------
     let politica = document.getElementById("politica");
@@ -55,6 +43,21 @@ document.querySelector("form").addEventListener("submit", function (event) {
         errorPolitica.textContent = "";
     }
 
+    //Contraseña -------------------------------------------------------------
+    let password = document.getElementById("password");
+    let repeatPassword = document.getElementById("repeat-password");
+    let errorPassword = document.getElementById("error-password");
+
+    if (password.value !== repeatPassword.value) {
+        errorPassword.textContent = "Las contraseñas no coinciden.";
+        password.classList.add("error-input");
+        repeatPassword.classList.add("error-input");
+        errores = true;
+    } else {
+        errorPassword.textContent = "";
+        password.classList.remove("error-input");
+        repeatPassword.classList.remove("error-input");
+    }
     
 
     // Sala -----------------------------------------------------------------
